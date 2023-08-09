@@ -1,5 +1,5 @@
 # Learning-LLM-From-Zero
-This repository is all about my LLM journey: how to use, fine-tune, and build inference services with LLM.
+This repository is all about my LLM journey: how to use, fine-tuning, and build inference services with LLM.
 
 It's challenging but interesting .
 
