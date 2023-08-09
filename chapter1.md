@@ -1,4 +1,4 @@
-# Chapter 1: Run LLAMA2 model  with python code in 5 minutes
+# Chapter 1: Run LLAMA2 model  with Meta official python code 
 
 You need three steps to run LLAMA2 on you GPU machine, locally or  Cloud.
 

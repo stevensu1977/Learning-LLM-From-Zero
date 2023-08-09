@@ -7,7 +7,7 @@ It's challenging but interesting .
 
 # Table of Contents
 
-- [Chapter 1:  Run LLAMA2 model  with offically python code in 5 minutes](#chapter-1)
+- [Chapter 1:  Run LLAMA2 model  with official python code](./chapter1.md)
 - [Chapter 2: Run LLAMA2 model with HuggingFace transformer](#chapter-2)
 - [Chapter 3:  Embedding your PDF and send it to LLM.](#chapter-3)
 - [Chapter 4:  Add vector database Qdrant to your project.](#chapter-4)
