@@ -8,7 +8,7 @@ It's challenging but interesting .
 # Table of Contents
 
 - [Chapter 1:  Run LLAMA2 model  with Meta official python code](./chapter1.md)
-- [Chapter 2: Run LLAMA2 model with HuggingFace transformer](#chapter-2)
+- [Chapter 2: Run LLAMA2 model with HuggingFace transformers](./chapter2.md)
 - [Chapter 3:  Embedding your PDF and send it to LLM.](#chapter-3)
 - [Chapter 4:  Add vector database Qdrant to your project.](#chapter-4)
 - [Chapter 5:  Add LangChain to your project ](#chapter-4)
