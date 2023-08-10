@@ -2,8 +2,6 @@
 
 You need three steps to run LLAMA2 on you GPU machine, locally or  Cloud.
 
-
-
 #### Step1. Download LLAMA2-7B-Chat model
 
 There have many LLAM2 model etc llama2-7b, llama2-7b-chat, we only need: **llama2-7b-chat**
@@ -41,7 +39,7 @@ pip install -r requirements.txt
 
 
 
-#### Step3 Run Meta offically example code
+#### Step3 Run Meta offically inference code
 
 Just change "--ckpt_dir" parameter, use your model floder
 
@@ -113,11 +111,28 @@ User: I am going to ChengDu, what should I see ?
 #### Explain how the code works 
 
 1. example_chat_completion.py use llama.Llama.build function load model
-2. llama/model.py, in this file Meta create native pytorch network for Llama,   those class inherited from torch.nn.Module:    Transformer, TransformerBlock,FeedForward, Attention, RMSNorm.   
+2. llama/model.py, in this file Meta create native pytorch network for Llama,   those class inherited from torch.nn.Module:    Transformer, TransformerBlock,FeedForward, Attention, RMSNorm.    #TODO Dive Deep LLAMA network layer .
+3. llama/tokenizer.py , Tokenizer class 
+4. llama/generation.py ,  
 
- #TODO Dive Deep LLAMA network layer .
-
-
+   ```python
+   """
+   Inference func
+   # tokenizer build prompt_tokens from text prommpts
+   # temperature 0~1, LLAMA2 temperature refers to a parameter that can be adjusted to control the creativity or novelty of the generated text from the LLAMA2 language model. The temperature value can be set to a value between 0 and 1, When a temperature of 0 is used, the model always generates the same text, while a temperature of 1 results in the most diverse and unpredictable text. 
+   In general, a lower temperature value may be preferred for tasks that require more factual or conservative text, such as language translation or summarization. A higher temperature value may be preferred for tasks that require more creative or imaginative text, such as poetry or fiction writing.
+   """
+   @torch.inference_mode()
+   def generate(
+           self,
+           prompt_tokens: List[List[int]],
+           max_gen_len: int,
+           temperature: float = 0.6,
+           top_p: float = 0.9,
+           logprobs: bool = False,
+           echo: bool = False,
+   ) -> Tuple[List[List[int]], Optional[List[List[float]]]]
+   ```
 
 #### Summary
 
