@@ -2,7 +2,7 @@
 
 You need three steps to run LLAMA2 on you GPU machine, locally or  Cloud.
 
-#### Step1. Download LLAMA2-7B-Chat model
+### Step1. Download LLAMA2-7B-Chat model
 
 There have many LLAM2 model etc llama2-7b, llama2-7b-chat, we only need: **llama2-7b-chat**
 
@@ -24,7 +24,7 @@ drwxrwxr-x 3 ubuntu ubuntu 4.0K Jul 25 01:57 arrow
 
 
 
-#### Step2. Git clone meta offically code and prepare python environment
+### Step2. Git clone meta offically code and prepare python environment
 
 We use meta offical example code , you need setup your python enviroments.
 
@@ -39,7 +39,7 @@ pip install -r requirements.txt
 
 
 
-#### Step3 Run Meta offically inference code
+### Step3 Run Meta offically inference code
 
 Just change "--ckpt_dir" parameter, use your model floder
 
@@ -108,7 +108,7 @@ User: I am going to ChengDu, what should I see ?
 
 
 
-#### Explain how the code works 
+### Explain how the code works 
 
 1. example_chat_completion.py use llama.Llama.build function load model
 2. llama/model.py, in this file Meta create native pytorch network for Llama,   those class inherited from torch.nn.Module:    Transformer, TransformerBlock,FeedForward, Attention, RMSNorm.    #TODO Dive Deep LLAMA network layer .
@@ -134,6 +134,6 @@ User: I am going to ChengDu, what should I see ?
    ) -> Tuple[List[List[int]], Optional[List[List[float]]]]
    ```
 
-#### Summary
+### Summary
 
 #TODO 
