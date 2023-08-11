@@ -1,14 +1,12 @@
 # Chapter 2: Run LLAMA2 model  with huggingface transformers
 
-#### Step1. Covert Meta  LLAMA2-7B-Chat  official  model weights to HF format
+### Step1. Covert Meta  LLAMA2-7B-Chat  official  model weights to HF format
 
 install huggingface transformers 
 
 ```py
 pip install transformers
 ```
-
-
 
 You need use convert official model weights to Huggingface format , if we want convert Llam2/models/7B  (this script model_size only support '7,13,70', if you use '7' it would use '7B' as folder name , so you need  changed 'Llama2/models/llama2-7b-chat' folder name to 'Llama2/models/7B' , )
 
@@ -18,7 +16,7 @@ convert_llama_weights_to_hf.py --input_dir Llama2/models --output_dir Llama2/mod
 
 
 
-#### Step2. Use transformers libraray load Llama2 model
+###  Step2. Use transformers libraray load Llama2 model
 
 Use Huggingface transformers library load Llama2 model , you can start it once or use --interaction
 
@@ -26,7 +24,6 @@ Use Huggingface transformers library load Llama2 model , you can start it once o
 
 ```bash
 python main_hf.py --model_name ../Llama2/models/llama-2-13b-chat-hf
-
 
 #output
 model_name='../Llama2/models/llama-2-13b-chat-hf'
@@ -73,7 +70,7 @@ This code will print out "Hello, World!" when run. The `main` package imports th
 
 
 
-#### Explain how the code works 
+### Explain how the code works 
 
 1. We use transformers libliry two class: AutoTokenizer, AutoModelForCausalLM
 2. AutoTokenizer 
