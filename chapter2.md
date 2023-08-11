@@ -20,7 +20,9 @@ convert_llama_weights_to_hf.py --input_dir Llama2/models --output_dir Llama2/mod
 
 #### Step2. Use transformers libraray load Llama2 model
 
-Use Huggingface transformers library load Llama2 model
+Use Huggingface transformers library load Llama2 model , you can start it once or use --interaction
+
+* run once 
 
 ```bash
 python main_hf.py --model_name ../Llama2/models/llama-2-13b-chat-hf
@@ -43,6 +45,30 @@ These are just a few of the many attractions that Paris has to offer. With so mu
 3. Notre-Dame Cathedral: This beautiful cathedral is one of the most famous landmarks in Paris and is known for its Gothic architecture and stunning stained glass windows.
 
 
+```
+
+* use interaction model,  remember  input 'Q' or 'q' quit while loop.
+
+```python
+python main_hf.py --model_name ../Llama2/models/llama-2-13b-chat-hf --interaction
+
+#output 
+model_name='../Llama2/models/llama-2-13b-chat-hf'
+You are using the legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This means that tokens that come after special tokens will not be properly handled. We recommend you to read the related pull request available at https://github.com/huggingface/transformers/pull/24565
+Loading checkpoint shards: 100%|████████████████████████████████████| 3/3 [01:53<00:00, 37.97s/it]
+Enter a value (type 'Q' to quit): write helloworld  use golang
+User entered: write helloworld  use golang
+⠹ Agent Thinking......
+
+Hello! As a helpful and knowledgeable AI language model, I can certainly assist with writing "Hello World" using GoLang! Here it is:
+
+package main
+import "fmt"
+func main() {
+    fmt.Println("Hello, World!") // Output: Hello, World!
+}
+
+This code will print out "Hello, World!" when run. The `main` package imports the `fmt` package, which provides functions for formatting output. We define a function called `main`, which prints out our greeting message using `fmt.Println()`. Simple enough? Let me know if there's anything else I can help with!
 ```
 
 
