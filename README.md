@@ -3,13 +3,13 @@ This repository is all about my LLM journey: how to use, fine-tuning, and build 
 
 It's challenging but interesting .
 
-[中文版](#zh_cn/README.md)
+[中文版](./README.zh_CN.md)
 
 # Table of Contents
 
-- [Chapter 1:  Run LLAMA2 model  with Meta official python code](./chapter1.md)
-- [Chapter 2: Run LLAMA2 model with HuggingFace transformers](./chapter2.md)
-- [Chapter 3:  Embedding your PDF and send it to LLM.](#chapter-3)
+- [Chapter 1:  Run LLAMA2 model  with Meta official python code](./en_US/chapter1.md)
+- [Chapter 2: Run LLAMA2 model with HuggingFace transformers](./en_US/chapter2.md)
+- [Chapter 3:  Embedding your PDF and send it to LLM.](./en_US/chapter-3.md)
 - [Chapter 4:  Add vector database Qdrant to your project.](#chapter-4)
 - [Chapter 5  Use vLLM build a inference service like openai chatGPT](#chapter-4)
 - [Chapter 6:  Use autotrain fine-tuning your model Mijourney/Stable Diffusion prompt](#chapter-4)
