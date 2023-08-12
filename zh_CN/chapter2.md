@@ -1,4 +1,4 @@
-# Chapter 2: 使用HugginfFace transformers 接口运行LLAMA2模型
+# Chapter 2: 使用HuggingFace transformers 接口运行LLAMA2模型
 
 ### 步骤1. 将 Meta LLAMA2-7B-Chat 官方模型权重转换为 Huggingface 格式
 
