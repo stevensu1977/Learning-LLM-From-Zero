@@ -2,11 +2,7 @@
 
 ### Step1. Covert Meta  LLAMA2-7B-Chat  official  model weights to HF format
 
-install huggingface transformers 
 
-```py
-pip install transformers
-```
 
 You need use convert official model weights to Huggingface format , if we want convert Llam2/models/7B  (this script model_size only support '7,13,70', if you use '7' it would use '7B' as folder name , so you need  changed 'Llama2/models/llama2-7b-chat' folder name to 'Llama2/models/7B' , )
 
@@ -20,10 +16,11 @@ convert_llama_weights_to_hf.py --input_dir Llama2/models --output_dir Llama2/mod
 
 Use Huggingface transformers library load Llama2 model , you can start it once or use --interaction
 
-* run once 
+* run once inference, please change `--mode_name` to your model path 
 
 ```bash
-python main_hf.py --model_name ../Llama2/models/llama-2-13b-chat-hf
+cd code/chapter2
+python chapter2.py --model_name ../../Llama2/models/llama-2-13b-chat-hf
 
 #output
 model_name='../Llama2/models/llama-2-13b-chat-hf'
@@ -44,7 +41,7 @@ These are just a few of the many attractions that Paris has to offer. With so mu
 
 ```
 
-* use interaction model,  remember  input 'Q' or 'q' quit while loop.
+* run it with interaction model ,  remember  input 'Q' or 'q' quit while loop.
 
 ```python
 python main_hf.py --model_name ../Llama2/models/llama-2-13b-chat-hf --interaction
@@ -66,6 +63,8 @@ func main() {
 }
 
 This code will print out "Hello, World!" when run. The `main` package imports the `fmt` package, which provides functions for formatting output. We define a function called `main`, which prints out our greeting message using `fmt.Println()`. Simple enough? Let me know if there's anything else I can help with!
+
+Enter a value (type 'Q' to quit)
 ```
 
 
