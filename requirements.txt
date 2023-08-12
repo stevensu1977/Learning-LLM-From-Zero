@@ -1,0 +1,10 @@
+halo
+PyPDF2
+qdrant-client
+langchain
+transformers
+sentence_transformers
+accelerate
+bitsandbytes
+torch
+
