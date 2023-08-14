@@ -2,6 +2,8 @@
 
 We should reused chatper2 source code ,  we write some new code , it's can read pdf and embedding content ,  when we input prompt , first search pdf content and build prompt send to LLM. In this chapter we not use vector database store multiple pdf, only use some simple code .
 
+![image](../images/chapter3-architecture.png)
+
 ### Try
 
 We download SDXL arxiv paper pdf , and run code , may be code it's not perfect but work :p . 
