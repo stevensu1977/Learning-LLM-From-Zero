@@ -9,8 +9,8 @@ It's challenging but interesting .
 
 - [Chapter 1:  Run LLAMA2 model  with Meta official python code](./en_US/chapter1.md)
 - [Chapter 2: Run LLAMA2 model with HuggingFace transformers](./en_US/chapter2.md)
-- [Chapter 3:  Embedding your PDF and send it to LLM.](./en_US/chapter-3.md)
-- [Chapter 4:  Add vector database Qdrant to your project.](#chapter-4)
+- [Chapter 3:  Embedding your PDF and send it to LLM.](./en_US/chapter3.md)
+- [Chapter 4:  Store moer embedding data with vector database Qdrant](#chapter-4)
 - [Chapter 5  Use vLLM build a inference service like openai chatGPT](#chapter-4)
 - [Chapter 6:  Use autotrain fine-tuning LLM, build your Mijourney/Stable Diffusion prompt model](#chapter-4)
 - [Reference](#Reference)
