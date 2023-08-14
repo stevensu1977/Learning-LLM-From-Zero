@@ -1,10 +1,16 @@
-# Chapter 3: Embedding your PDF and build context with it and send to LLM
+# Chapter 3:  加载PDF并且Embedding文本后发送给LLM
 
-We should reused chatper2 source code ,  we write some new code , it's can read pdf and embedding content ,  when we input prompt , first search pdf content and build prompt send to LLM. In this chapter we not use vector database store multiple pdf, only use some simple code .
+我们应该重用第二章的源代码，编写一些新代码，它可以读取 PDF 并嵌入内容，在我们输入提示时，先搜索 PDF 内容并构建提示发送到 LLM。在本章中，我们不使用向量数据库存储多个 PDF，尝试尽量使用只使用一些不依赖于复杂框架的代码完成测试。
+
+
+
+![image](../images/chapter3-architecture.png)
+
+
 
 ### Try
 
-We download SDXL arxiv paper pdf , and run code , may be code it's not perfect but work :p . 
+我们下载 SDXL 的 Arxiv 论文 PDF，并运行代码，也许这段代码不完美，但可行， :p  。
 
 ```bash
 curl -o ./2307.01952.pdf -L https://arxiv.org/pdf/2307.01952
@@ -32,15 +38,13 @@ Enter a value (type 'Q' to quit):
 
 
 
-
-
 ### Explain how the code works 
 
-Load pdf, embedding it ,  search embedding data with query , build context into prompt , send it to LLM.
+加载 PDF，将其嵌入，使用查询搜索嵌入数据，将上下文构建到提示中，并将其发送到 LLM。
 
 #### Step1. Load your PDF (utils/embedding.py)
 
-We use PyPDF2 load our PDF, read pdf and split it to chunks.
+我们使用 PyPDF2 加载我们的 PDF，读取 PDF 并将其分割成chunks块。
 
 ```python
 def load_data_from_pdf(pdf_path=""):
@@ -72,7 +76,7 @@ def get_text_chunks(text):
 
 #### Step2. Embedding your PDF content (utils/embedding.py)
 
-We use sentence_transformers library process embedding. 
+我们使用 sentence_transformers 库处理嵌入。
 
 ```python
 #load embedding model, you can choice your embedding model
@@ -117,7 +121,7 @@ def search_embedding(pdf_chunks, pdf_embeddings,queries: List[str]=['What is SDX
 
 
 
-####  Step3. Combined all togther ,  search embedding data and build prompt context, send to LLM 
+####  Step3. 将所有内容组合在一起，搜索嵌入数据并构建提示上下文，发送到 LLM
 
 ```python
 #when we input some query , etc. What is SDXL, we need search your input in embedding data 
