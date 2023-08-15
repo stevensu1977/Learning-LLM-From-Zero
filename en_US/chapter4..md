@@ -1,4 +1,4 @@
-# Chapter 4: Store moer embedding data with vector database Qdrant 
+# Chapter 4: Store  embedding data with vector database Qdrant 
 
 In chapter3 , We already show you how to embedding pdf text and use sentence transformers search it ,  but if we have more pdf ,  more context need embedding and search it how we can server it , answer is use `vector database`.  You can found more information in this link [what is vector database](https://zilliz.com/learn/what-is-vector-database).  In this chapter , we shoule show you how to use a vector database  ( we choice Qdrant store our embedding), replace sentence transofrmers memory search with Qdrant .
 
