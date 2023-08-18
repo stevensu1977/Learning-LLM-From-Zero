@@ -1,0 +1,6 @@
+{
+"model": "./Llama2/models/llama-2-7b-chat-hf",
+"prompt": "San Francisco is a",
+"max_tokens": 128,
+"temperature": 0
+}
