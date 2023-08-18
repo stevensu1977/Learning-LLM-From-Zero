@@ -126,10 +126,10 @@ def load_model(model_name=None,interaction=False,file_path=".",file_ext_name=".j
         print("User entered:", user_input)
         
         #search embedding
-        results=search_query("white tiger")
+        results=search_query(user_input)
         context=""
         for item in results:
-            print(f'Qdrant search result: {item.payload["desc"]}\n')
+            #print(f'Qdrant search result: {item.payload["desc"]}\n')
             context+=item.payload["desc"]
         spinner.start()
         prompt_dialogs=build_dialogs(user_input,context=context)
@@ -156,7 +156,7 @@ def main():
     parser.add_argument('--model_name',required=True,dest='model_name',default=None,help='HF model name or local file path')
     parser.add_argument('--interaction', default=False,action="store_true", help="use agent interaction model")
     parser.add_argument('--file_path',required=True,default=".",help='must setup pdf path')
-    parser.add_argument('--file_ext_name',default=".json",help=" default .json , only support .json, .pdf")
+    parser.add_argument('--file_ext_name',default=".pdf",help=" default .json , only support .json, .pdf")
     args= parser.parse_args()
     
 
