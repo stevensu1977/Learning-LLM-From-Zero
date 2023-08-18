@@ -2,7 +2,7 @@
 
 在第三章，我们已经展示了如何嵌入PDF文本并使用句子转换器搜索它，但如果我们有更多的PDF，需要嵌入更多的上下文并搜索它，我们该怎么做呢？答案是使用 `向量数据库`。你可以在这个链接中找到更多信息 [什么是向量数据库](https://zilliz.com/learn/what-is-vector-database)。在本章中，我们将向你展示如何使用向量数据库（我们选择Qdrant存储我们的嵌入），用Qdrant 替换sentence transformers 的内存搜索。
 
-![chapter4-architecture](/Users/wsuam/Documents/github/Learning-LLM-From-Zero/images/chapter4-architecture.png)
+![chapter4-architecture](../images/chapter4-architecture.png)
 
 
 
@@ -50,15 +50,19 @@ operation_info= connection.upsert(
 
 
 
-### Step3  升级chatper3.py 使用Qdrant存储嵌入数据
+### Step3  使用Qdrant存储嵌入数据
 
-现在，我们可以将`chatper3.py`重写为`chapter4.py`，使用Qdrant存储我们的嵌入数据，你可以在`qdrant_tools.py`和`embedding.py`中找到。
+现在，我们将上一章的`chatper3.py`重写为`chapter4.py`，使用Qdrant存储我们的嵌入数据，你可以在`qdrant_tools.py`和`embedding.py`中找到。
 
 
 
 ```bash
+#将你的文档放入Learning-LLM-From-Zero/pdf
+
+cd code/chapter4
+
 #now you can load pdf or json from folder , just setup --file_path, the whole in the path data should be loaded.
-python chapter4.py  --model_name ../../../Llama2/models/llama-2-13b-chat-hf --interaction --file_path ../../pdf --file_ext_name .pdf
+python chapter4.py  --model_name ../../../Llama2/models/llama-2-13b-chat-hf --interaction --file_path ../../pdf
 ```
 
 ![10f864d4-83da-4eea-9e59-9e58f00cdbac](/Users/wsuam/Documents/github/Learning-LLM-From-Zero/images/chapter4-screen.jpeg)
