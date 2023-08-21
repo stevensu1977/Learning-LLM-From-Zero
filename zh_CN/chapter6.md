@@ -1,14 +1,15 @@
-# Chapter 6: Fine tuning your own model use autotrain-advanced 
+# Chapter 6: 使用"autotrain-advanced"来微调您自己的模型 
 
-In this chapter, we shoud use autotrain-advanced tools base `TinyPixel/Llama-2-7B-bf16-sharded` model and  [luisroque/instruct-python-llama2-20k](https://huggingface.co/datasets/luisroque/instruct-python-llama2-20k) datasets  fine tuning your first own model , you can done this test on you A10 GPU (or other have 24GB GPU Memory cards)
+
+在这一章节中，我们应该使用"autotrain-advanced"工具，基于"TinyPixel/Llama-2-7B-bf16-sharded"模型和[luisroque/instruct-python-llama2-20k](https://huggingface.co/datasets/luisroque/instruct-python-llama2-20k) 数据集，来微调您自己的第一个模型。您可以在您的A10 GPU (或其他拥有24GB GPU内存的显卡)上进行测试
 
 ![chapter4-architecture](../images/chapter6-architecture.png)
 
-#### Step1. Install autotrain-advanced and start fine-tuning job
+#### Step1. 安装 autotrain-advanced 并开始微调任务
 
-[autorain-advanced](https://github.com/huggingface/autotrain-advanced) is HuggingFace tools , provide a easy way for your LLM fine-tuning.
+[autotrain-advanced](https://github.com/huggingface/autotrain-advanced) 是一个 HuggingFace 提供的训练工具,  它可以让你非常方便的进行模型微调。
 
-parameter explaned:
+autotrain参数说明:
 
 * --project_name your model folder 
 * --model your base model
@@ -16,7 +17,7 @@ parameter explaned:
 
 
 
-luisroque/instruct-python-llama2-20k datasets is a instruct python datasets , we can use it tran mode for how to generate good python code perpose .
+luisroque/instruct-python-llama2-20k 数据集是一个 instruct python 数据集，我们可以使用它来训练模型，以生成良好的 Python 代码。 
 
 ![image-20230821110213559](../images/chapter6-datasets.png)
 
@@ -41,9 +42,9 @@ autotrain llm --train --project_name 'llama2-python-instruct'  \
 
 
 
-### Step2. Test your model
+### Step2. 测试你的模型
 
-We write peft_tools.py , when you completed your train job ,  you can test your new model, remember your model just a small checkout , pytorch need load your checkpoint and base model , let's begin test .
+我们编写了一个名为 peft_tools.py 的文件。当您完成训练作业后，您可以测试您的新模型。请记住，您的模型只是一个小的checkpoint，PyTorch 需要加载您的checkpoint和基础模型，让我们开始测试。
 
 ```py
 #ls ./llama2-python-instruct , found last checkpoint , example checkpoint-2642
@@ -100,9 +101,9 @@ Loading checkpoint shards: 100%|████████████████
 
 
 
-### Step3  Merge your own model and base model
+### Step3  合并PEFT模型和基础模型
 
-In this step, we load your checkpoint and base model, and now we can merge them together . 
+在这一步中，我们加载您的checkpoint和基础模型，现在我们可以将它们合并在一起。
 
 ```bash
 python peft_tools.py --model_path ./llama2-python-instruct/checkpoint-2642/  --merge
