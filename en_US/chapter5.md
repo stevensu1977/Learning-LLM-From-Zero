@@ -2,7 +2,7 @@
 
 In this chapter5 We use [vLLM](https://vllm.ai/) build inference service , why we choice vLLM , there have two reasons: 1. vLLM have good performence, you can found  more performance information https://vllm.ai/ , 2.  vLLM can be deployed as a server that mimics the OpenAI API protocol. This allows vLLM to be used as a drop-in replacement for applications using OpenAI API.
 
-![chapter4-architecture](../images/chapter5-architecture.png)
+![chapter5-architecture](../images/chapter5-architecture.png)
 
 
 

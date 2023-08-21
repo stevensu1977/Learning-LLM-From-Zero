@@ -1,4 +1,4 @@
-# Chapter 6: Fine tuning your own model use autotrain-advanced in A10 GPU
+# Chapter 6: Fine tuning your own model use autotrain-advanced 
 
 In this chapter, we shoud use autotrain-advanced tools base `TinyPixel/Llama-2-7B-bf16-sharded` model and  [luisroque/instruct-python-llama2-20k](https://huggingface.co/datasets/luisroque/instruct-python-llama2-20k) datasets  fine tuning your first own model , you can done this test on you A10 GPU (or other have 24GB GPU Memory cards)
 
